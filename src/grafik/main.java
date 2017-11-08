@@ -98,6 +98,7 @@ public class main extends Application {
 		 * 
 		 * 		 TIPS: Börja i mitten och gå snett uppåt.
 		 */
+
 		
 	}
 
@@ -109,13 +110,17 @@ public class main extends Application {
 		 * 		 Sedan måste mellanrummet mellan ringarna minska också...
 		 */
 
-		int rings = 15;
+		int rings = 60;
 
 		for (int i = rings; i >= 0; i--) {
 
 			double radius = WIDTH / rings / 2;
 
 			Circle cir = new Circle(i * radius);
+
+			cir.setTranslateX(WIDTH / 2);
+
+			cir.setTranslateY(HEIGHT / 2);
 
 			int r = (int) (Math.random() * 255);
 			int g = (int) (Math.random() * 255);
